@@ -14,7 +14,7 @@
 	"highlight_line": false,
 	"draw_white_space": "selection",
 	"draw_indent_guides": true,
-	// 80 is top tight for Objctive-C, 100 is like "okay", 120 is OMG PRESS ENTER
+	// 80 is too tight for Objective-C, 100 is okay, and 120 is like OMG PRESS ENTER
 	"rulers": [ 80, 100, 120 ],
 	"scroll_past_end": false,
 	//
