@@ -1,0 +1,62 @@
+set cursorline
+set background=dark
+set t_Co=256
+filetype plugin on
+syn on
+set ts=4
+set nocompatible
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set encoding=utf-8
+set autoindent
+set showmode
+set hidden
+set wildmenu
+set wildmode=list:longest
+set ttyfast
+set backspace=indent,eol,start
+
+set scrolloff=10
+set laststatus=2
+set statusline=\ [%n]\ %#todo#%t%*\ %l/%L\ —\ %c%=%y\[%{strlen(&fenc)?&fenc:'none'}\ %{&ff}]\ %m
+set relativenumber
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+set wrap
+set nuw=6
+set linebreak
+set nolist
+set textwidth=0
+set wrapmargin=0
+au FocusLost * :wa
+
+nnoremap <tab> %
+vnoremap <tab> %
+inoremap jj <ESC>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap ; :
+nnoremap , :
+
+
+set langmenu=none            " Always use english menu
+set keymap=russian-jcukenwin " Alternative keymap
+set iminsert=0               " English by default
+set imsearch=-1              " Search keymap from insert mode
+set encoding=utf-8           " Default encoding
+
+colorscheme gruvbox
+let c_no_curly_error = 1
+filetype plugin indent on

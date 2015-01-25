@@ -1,0 +1,30 @@
+{
+	// SWAG
+	"theme": "Spacegray.sublime-theme",
+	"color_scheme": "Packages/Base16 Color Schemes/base16-ocean.dark.tmTheme",
+	"caret_style": "smooth",
+	// Fonts
+	"font_face": "Menlo Regular",
+	"font_size": 13.0,
+	// Editing
+	"tab_size": 4,
+	"line_numbers": true,
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"highlight_line": false,
+	"draw_white_space": "selection",
+	"draw_indent_guides": true,
+	// 80 is top tight for Objctive-C, 100 is like "okay", 120 is OMG PRESS ENTER
+	"rulers": [ 80, 100, 120 ],
+	"scroll_past_end": false,
+	//
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	// on_save
+	"save_on_focus_lost": true,
+	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": true,
+	"close_windows_when_empty": true,
+	// Have no idea about it
+	"ignored_packages": [ "Vintage" ]
+}
