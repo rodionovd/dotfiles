@@ -6,10 +6,8 @@ DOTFILES_ROOT=$(pwd)
 # Create new or backup an existing .vim directory
 echo "• Backing up ~/.vim directory"
 VIMDIR=$HOME/.vim
-if [[ ! -d "$VIMDIR" ]];
+if [[ -d "$VIMDIR" ]];
 then
-	mkdir "$VIMDIR"
-else
 	mv -v "$HOME/.vim" "$HOME/.vim.bak"
 fi
 echo "• Backing up ~/.vimrc file"
