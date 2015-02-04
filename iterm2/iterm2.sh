@@ -9,9 +9,10 @@ then
 	# Install the latest iTerm2 nightly build available
 	echo "• Installing iTerm2 (latest)"
 	brew cask install "$DOTFILES_ROOT/iterm2/iterm2-nightly.rb"
-# else
-	# Oops, what if user is using iTerm for running this script?
-	# killall iTerm
+else
+	if [[ "iTerm.app" != "$TERM_PROGRAM" ]]; then
+		killall iTerm
+	fi
 fi
 
 echo "• Installing iTerm2 Preferences"

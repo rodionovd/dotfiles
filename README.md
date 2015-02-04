@@ -14,4 +14,4 @@ cd ~/.dotfiles
 ./bootstrap
 ```
 
-::shipit::
+:shipit:
