@@ -8,6 +8,7 @@ ZSH_THEME="rodionovd"
 
 # Aliases
 alias cl="clear"
+alias o="open ." # Open current directory in Finder
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
