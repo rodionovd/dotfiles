@@ -8,7 +8,7 @@ then
 else
 	echo "• Updating Homebrew"
 	brew update
-	brew upgrade
+	brew upgrade --all
 	brew cleanup
 fi
 
