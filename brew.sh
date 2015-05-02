@@ -18,4 +18,4 @@ brew install class-dump cloc git rust sqlite valgrind zsh
 # Install some OS X apps using Cask
 echo "• Installing Homebrew Cask and some apps"
 brew install caskroom/cask/brew-cask
-brew cask install github hopper-disassembler skype the-unarchiver transmission
+brew cask install github hopper-disassembler skype the-unarchiver transmission sketch coderunner slack 0xed virtualbox
