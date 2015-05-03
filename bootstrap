@@ -8,6 +8,7 @@ echo "=================================="
 
 sh "$DOTFILES_ROOT/git/git.sh"
 sh "$DOTFILES_ROOT/brew.sh"
+sh "$DOTFILES_ROOT/cask/cask.sh"
 sh "$DOTFILES_ROOT/iterm2/iterm2.sh"
 # sh "$DOTFILES_ROOT/sublime/sublime.sh"
 sh "$DOTFILES_ROOT/vim/vim.sh"

@@ -8,7 +8,6 @@ if [[ ! -d "/Applications/iTerm.app" ]];
 then
 	# Install the latest iTerm2 nightly build available
 	echo "• Installing iTerm2 (latest)"
-	brew cask install "$DOTFILES_ROOT/iterm2/iterm2-nightly.rb"
 else
 	if [[ "iTerm.app" != "$TERM_PROGRAM" ]]; then
 		killall iTerm
