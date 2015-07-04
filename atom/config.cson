@@ -1,0 +1,42 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "metrics"
+      "autoflow"
+      "bookmarks"
+      "image-view"
+    ]
+    ignoredNames: [
+      ".git"
+      ".DS_Store"
+      "*.pyc"
+    ]
+    themes: [
+      "spacegray-dark-syntax"
+      "one-dark-ui"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+  editor:
+    invisibles: {}
+    tabLength: 4
+    stripTrailingWhitespace:
+      singleTrailingNewline: true
+    softWrap: true
+    scrollSensitivity: 25
+    fontFamily: "Monaco"
+    fontSize: 12
+    preferredLineLength: 30
+  "autocomplete-python": {}
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  "autocomplete-plus": {}
+  "todo-show": {}
+  "travis-ci-status": {}
+  "exception-reporting":
+    userId: "1428bea9-2829-ac12-e6c8-09465f92ff49"
+".python.source":
+  editor:
+    autoIndentOnPaste: false
