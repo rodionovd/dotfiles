@@ -8,6 +8,6 @@ then
 fi
 
 echo "• Installing pip packages"
-for pkg in "machobot"; do
+for pkg in "machobot" "nose"; do
 	sudo pip install "${pkg}"
 done
