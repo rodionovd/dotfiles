@@ -4,7 +4,7 @@
 if [[ ! -f $(which pip) ]];
 then
 	echo "• Installing pip"
-    sudo easy_install pip
+	sudo easy_install pip
 fi
 
 echo "• Installing pip packages"
