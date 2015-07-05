@@ -6,6 +6,7 @@ echo "=================================="
 echo "Installing rodionovd's .dotfiles  "
 echo "=================================="
 
+sh "$DOTFILES_ROOT/xcode.sh"
 sh "$DOTFILES_ROOT/git/git.sh"
 sh "$DOTFILES_ROOT/brew.sh"
 sh "$DOTFILES_ROOT/cask/cask.sh"
