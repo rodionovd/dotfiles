@@ -8,7 +8,12 @@ ZSH_THEME="rodionovd"
 
 # Aliases
 alias cl="clear"
-alias o="open ." # Open current directory in Finder
+# Open current directory in Finder
+alias o="open ."
+# Open an x86_64 executable in Hopper Disassembler
+alias hop="hopper -o -a -M -F -X -e"
+# Open an i386 executable in Hopper Disassembler
+alias hop86="hopper -o -a -M -f -x -e"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
