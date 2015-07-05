@@ -14,6 +14,7 @@ fi
 
 # Install the required stuff
 echo "• Installing Homebrew formulae"
+brew doctor
 for formulae in "git" "zsh" "sqlite" "cloc"; do
 	brew install "${formulae}"
 done
