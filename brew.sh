@@ -14,6 +14,6 @@ fi
 
 # Install the required stuff
 echo "• Installing Homebrew formulae"
-for formulae in "class-dump" "git" "zsh" "rust" "sqlite" "cloc" "valgrind"; do
+for formulae in "git" "zsh" "sqlite" "cloc"; do
 	brew install "${formulae}"
 done
