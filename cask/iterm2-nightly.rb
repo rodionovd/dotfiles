@@ -11,5 +11,7 @@ cask :v1 => 'iterm2-nightly' do
   license :gpl
 
   app 'iTerm.app'
-  zap :delete => '~/Library/Preferences/com.googlecode.iterm2.plist'
+  zap :delete => [
+      '~/Library/Preferences/com.googlecode.iterm2.plist',
+  ]
 end
