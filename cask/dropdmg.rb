@@ -1,9 +1,9 @@
 cask :v1 => 'dropdmg' do
-	version '3.2.6'
+	version '3.2.7'
 	app 'DropDMG.app'
-	sha256 '8e07cdeef08db9f32f150c76e3145ca1b8ed131f9d8132d739ee90126da9a88e'
+	sha256 '5f27c67364cef6569633b98e250f73119016249ec7ec06908c117a008dc6c55f'
 
-	url 'https://c-command.com/downloads/DropDMG-3.2.6.dmg'
+	url 'https://c-command.com/downloads/DropDMG-3.2.7.dmg'
 	name 'DropDMG'
 	homepage 'https://c-command.com/dropdmg/'
 
