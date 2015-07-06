@@ -14,6 +14,9 @@ done
 if [[ ! -d "/Applications/iTerm.app" ]];
 then
 	echo "• Installing iTerm2 (latest)"
+	# TODO(rodionovd): use cask from caskroom/versions:
+	# brew tap caskroom/versions
+	# brew cask install iterm2-nightly
 	brew cask install "$DOTFILES_ROOT/cask/iterm2-nightly.rb"
 fi
 brew cask cleanup
