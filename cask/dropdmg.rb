@@ -10,9 +10,10 @@ cask :v1 => 'dropdmg' do
 	license :commercial
 	depends_on :macos => '>= :snow_leopard'
 	depends_on :arch => :intel
-	
+
 	zap :delete => [
 		'~/Library/Automator/DropDMG.action',
-		'~/Library/Automator/Expand Disk Image.action'
+		'~/Library/Automator/Expand Disk Image.action',
+		'~Library/Preferences/com.c-command.DropDMG.plist',
 	]
 end
