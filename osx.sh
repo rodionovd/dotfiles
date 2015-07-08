@@ -6,28 +6,43 @@ echo "• Updating OS X defaults"
 
 # --[ Systemwide ]--
 
-# Show the ~/Library folder
-chflags nohidden ~/Library
-
-# Force usage of Finder's list view
-defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
 # Disable «smart» quotes and «smart» dashes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Disable disk image verification
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# --[ Trackpad ]--
+
+# Enable tap to click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Enable three finger drag
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
 # --[ Finder ]--
 
-# Set ~/Documents as the default Finder window location
-defaults write com.apple.finder NewWindowTarget -string "PfDo"
+# Set $HOME as the default Finder window location
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Documents/"
 
 # Expand the following File Info panes:
@@ -67,6 +82,28 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0.1f
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Force usage of Finder's list view
+defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
+
+# --[ Dock ]--
+
+# Set Dock to appear on the left
+defaults write com.apple.dock orientation -string right
+
+# Disable Dock icon magnification
+defaults write com.apple.dock magnification -bool false
+
+# Autohide Dock
+defaults write com.apple.dock autohide -bool true
+
+# Set the icon size of Dock items
+defaults write com.apple.dock tilesize -int 18
 
 # --[ Safary ]--
 
@@ -126,9 +163,22 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
 
+# --[ Time Machine ]---
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Disable local Time Machine backups
+sudo tmutil disablelocal
+
+# --[ Network ]--
+
+# Use OpenDNS servers
+sudo networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
+
 # ============================================================
 # Apply the changes
 #
-for app in "Activity Monitor" "Finder" "Messages" "Safari"; do
+for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer"; do
 	killall "${app}" > /dev/null 2>&1
 done
