@@ -30,6 +30,11 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Enable "Ask to keep changes when closing documents"
+defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool true
+
+# Disable "close windows when quitting an app"
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # --[ Trackpad ]--
 
 # Enable tap to click
