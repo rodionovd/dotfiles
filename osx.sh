@@ -35,6 +35,10 @@ defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool true
 
 # Disable "close windows when quitting an app"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+
+# Enable Graphite appearance
+defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+
 # --[ Trackpad ]--
 
 # Enable tap to click
