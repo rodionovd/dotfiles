@@ -39,6 +39,9 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # Enable Graphite appearance
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
+# Use dark menubar and Dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
 # --[ Trackpad ]--
 
 # Enable tap to click
