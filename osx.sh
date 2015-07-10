@@ -42,6 +42,9 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 # Use dark menubar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
+# Jump to the spot that's clicked in the scroll bar
+defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
+
 # --[ Trackpad ]--
 
 # Enable tap to click
