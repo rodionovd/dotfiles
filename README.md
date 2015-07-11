@@ -10,8 +10,7 @@ As simple as that:
 
 ```bash
 git clone https://github.com/rodionovd/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./bootstrap
+(cd ~/.dotfiles && ./bootstrap)
 ```
 
 :shipit:
