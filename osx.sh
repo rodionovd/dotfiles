@@ -197,3 +197,9 @@ sudo networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
 for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer"; do
 	killall "${app}" > /dev/null 2>&1
 done
+
+# fix-macosx by Landon Fuller
+echo "• Applying fix-macosx by Landon Fuller"
+git clone https://github.com/fix-macosx/fix-macosx ./fix-macosx
+(cd ./fix-macosx && python fix-macosx.py)
+rm -Rf ./fix-macosx
