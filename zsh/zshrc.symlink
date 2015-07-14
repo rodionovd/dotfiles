@@ -14,6 +14,8 @@ alias o="open ."
 alias hop="hopper -o -a -M -F -X -e"
 # Open an i386 executable in Hopper Disassembler
 alias hop86="hopper -o -a -M -f -x -e"
+# terminal-notifier is a way too long name for such handy tool
+alias tn="terminal-notifier -sound default -message"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
