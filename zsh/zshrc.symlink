@@ -17,7 +17,7 @@ alias hop86="hopper -o -a -M -f -x -e"
 # Open a 64-bit Cocoa application in Hopper Disassembler
 function hopa() {
     # Usage: hopa /Application/Notes.app
-    executable=$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable" "$1/Contents/Info.plist")
+    executable=$(/usr/libexec/PlistBuddy -c "Print :CFBundleExecutable" "$1/Contents/Info.plist")
     hop "$1/Contents/MacOS/$executable"
 }
 # terminal-notifier is a way too long name for such handy tool
