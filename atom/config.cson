@@ -36,6 +36,8 @@
   "travis-ci-status": {}
   "exception-reporting":
     userId: "1428bea9-2829-ac12-e6c8-09465f92ff49"
+  autosave:
+    enabled: true
 ".python.source":
   editor:
     autoIndentOnPaste: false
