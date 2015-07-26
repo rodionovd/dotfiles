@@ -28,6 +28,8 @@
     scrollSensitivity: 25
     fontFamily: "Monaco"
     fontSize: 12
+    showInvisibles: true
+    showIndentGuide: true
   "autocomplete-python": {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
