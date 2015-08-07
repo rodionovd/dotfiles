@@ -153,6 +153,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
+# Do not preload Top Hits in the background
+defaults write com.apple.Safari PreloadTopHit -bool false
+
 # --[ Activity Monitor ]--
 
 # Show the main window when launching Activity Monitor
