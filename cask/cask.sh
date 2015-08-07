@@ -6,7 +6,7 @@ DOTFILES_ROOT=$(pwd)
 # Install some OS X apps using Cask
 echo "• Installing Homebrew Cask and some apps"
 brew install caskroom/cask/brew-cask
-for app in "github" "hopper-disassembler" "skype" "the-unarchiver" "transmission" "sketch" "coderunner" "slack" "0xed" "virtualbox" "dropdmg" "atom" "pacifist" "dash" "wwdc"; do
+for app in "github" "hopper-disassembler" "skype" "the-unarchiver" "transmission" "sketch" "coderunner" "slack" "0xed" "virtualbox" "dropdmg" "atom" "pacifist" "dash" "wwdc" "marked"; do
 	brew cask install "${app}"
 done
 
