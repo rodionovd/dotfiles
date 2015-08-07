@@ -25,7 +25,7 @@ alias tn="terminal-notifier -sound default -message"
 # I made you, so I can break you
 alias kl="sudo killall"
 # yolo
-alias qq="xattr -d com.apple.quarantine"
+alias qq="xattr -rd com.apple.quarantine"
 # I can't remember anything, so
 function timer() {
     # Usage: timer $value[m,h] [text]
