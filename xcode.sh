@@ -23,6 +23,8 @@ USER=$(/usr/bin/security find-generic-password -wa "XCODE_INSTALL_USER")
 if [[ $? == 0 ]]; then
 	PASS=$(/usr/bin/security find-generic-password -wa "XCODE_INSTALL_PASSWORD")
 	if [[ $? == 0 ]]; then
-		XCODE_INSTALL_USER="$USER" XCODE_INSTALL_PASSWORD="$PASS" xcode-install install "$XCODE_TO_INSTALL"
+        sudo gem install --no-document xcode-install
+		XCODE_INSTALL_USER="$USER" XCODE_INSTALL_PASSWORD="$PASS" xcode-install install --verbose "$XCODE_TO_INSTALL"
+        xcode-install cleanup
 	fi
 fi
