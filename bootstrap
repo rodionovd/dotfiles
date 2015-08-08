@@ -2,6 +2,12 @@
 
 DOTFILES_ROOT=$(pwd)
 
+# Install my private dotfiles as well
+if [[ "$USER" == "rodionovd" ]]; then
+    git clone https://github.com/rodionovd/dotfiles-private.git
+    (cd /.dotfiles-private && ./bootstrap)
+fi
+
 echo "=================================="
 echo "Installing rodionovd's .dotfiles  "
 echo "=================================="
@@ -16,12 +22,6 @@ sh "$DOTFILES_ROOT/vim/vim.sh"
 sh "$DOTFILES_ROOT/zsh/zsh.sh"
 sh "$DOTFILES_ROOT/pip.sh"
 sh "$DOTFILES_ROOT/osx.sh"
-
-# Install my private dotfiles as well
-if [[ "$USER" == "rodionovd" ]]; then
-    git clone https://github.com/rodionovd/dotfiles-private.git
-    (cd /.dotfiles-private && ./bootstrap)
-fi
 
 echo "=================================="
 echo "Done. Have a nice day!            "
