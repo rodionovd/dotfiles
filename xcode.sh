@@ -15,8 +15,14 @@ sudo osascript <<EOD
   end tell
 EOD
 
-# TODO(rodionovd): install Xcode.app via xcode-install gem:
-# 1) sudo gem install xcode-select
-# 2) get XCODE_INSTALL_USER and XCODE_INSTALL_PASSWORD from Keychain:
-#    /usr/bin/security find-generic-password -wa SOMEKEY
-# 3) XCODE_INSTALL_USER="foo" XCODE_INSTALL_PASSWORD="bar" xcode-intall 6.4
+# Also install Xcode.app itself via `xcode-install` by Boris Bügling:
+# https://github.com/neonichu/xcode-install
+XCODE_TO_INSTALL="6.4"
+
+USER=$(/usr/bin/security find-generic-password -wa "XCODE_INSTALL_USER")
+if [[ $? == 0 ]]; then
+	PASS=$(/usr/bin/security find-generic-password -wa "XCODE_INSTALL_PASSWORD")
+	if [[ $? == 0 ]]; then
+		XCODE_INSTALL_USER="$USER" XCODE_INSTALL_PASSWORD="$PASS" xcode-install install "$XCODE_TO_INSTALL"
+	fi
+fi
