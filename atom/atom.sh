@@ -18,4 +18,15 @@ echo "• Installing Atom packages"
 for pkg in "autocomplete-python" "spacegray-dark-syntax" "travis-ci-status" "dash" "autosave"; do
 	apm install "${pkg}"
 done
+# Also install some packages from my GitHub forks
+# (I've been tuning them for my own perverted needs).
+for fork in "atom-script"; do
+    (
+        cd ~/.atom/packages
+        git clone "https://github.com/rodionovd/${fork}.git"
+        cd "${fork}"
+        apm install
+    )
+done
+#
 apm clean
