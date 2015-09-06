@@ -41,6 +41,8 @@
     userId: "1428bea9-2829-ac12-e6c8-09465f92ff49"
   autosave:
     enabled: true
+  "atom-scrolloff":
+    scrolloff: 7
 ".python.source":
   editor:
     autoIndentOnPaste: false
