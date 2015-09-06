@@ -21,6 +21,7 @@ sh "$DOTFILES_ROOT/atom/atom.sh"
 sh "$DOTFILES_ROOT/vim/vim.sh"
 sh "$DOTFILES_ROOT/zsh/zsh.sh"
 sh "$DOTFILES_ROOT/pip.sh"
+sh "$DOTFILES_ROOT/gems.sh"
 sh "$DOTFILES_ROOT/osx.sh"
 
 echo "=================================="
