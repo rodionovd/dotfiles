@@ -14,8 +14,8 @@
       "*.pyc"
     ]
     themes: [
-      "spacegray-dark-syntax"
       "one-dark-ui"
+      "spacegray-dark-syntax"
     ]
   "tree-view":
     hideIgnoredNames: true
@@ -30,6 +30,7 @@
     fontSize: 12
     showInvisibles: true
     showIndentGuide: true
+    backUpBeforeSaving: true
   "autocomplete-python": {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
