@@ -5,6 +5,7 @@ DOTFILES_ROOT=$(pwd)
 
 echo "• Setting Atom up"
 ATOMDIR=$HOME/.atom
+mkdir $ATOMDIR
 for file in "config.cson" "init.coffee" "keymap.cson" "snippets.cson" "styles.less"; do
     # Backup first
     if [[ -f "$ATOMDIR/${file}" ]]; then
