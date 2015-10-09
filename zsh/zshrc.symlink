@@ -45,6 +45,14 @@ function timer() {
         (sleep $t && tn "$2" -title "Hey 👋") &
     fi
 }
+# Random passwords every time
+function genpass() {
+    if (( $# == 0 )) then
+        echo "Usage: gepass <password length>"
+    else
+        openssl rand -base64 30
+    fi
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
