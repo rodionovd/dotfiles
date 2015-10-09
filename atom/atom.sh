@@ -15,7 +15,7 @@ for file in "config.cson" "init.coffee" "keymap.cson" "snippets.cson" "styles.le
 done
 
 echo "• Installing Atom packages"
-for pkg in "autocomplete-python" "spacegray-dark-syntax" "travis-ci-status" "dash" "autosave" "atom-scrolloff"; do
+for pkg in "autocomplete-python" "spacegray-dark-syntax" "travis-ci-status" "dash" "atom-scrolloff"; do
 	apm install "${pkg}"
 done
 # Also install some packages from my GitHub forks
