@@ -208,7 +208,7 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters array" $FILE
 	$PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters:2 integer 1048576" $FILE
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 
-# -- [ Menubar ]--
+# --[ Menubar ]--
 
 # Always display Volume menubar item
 FILE=~/Library/Preferences/com.apple.systemuiserver.plist
