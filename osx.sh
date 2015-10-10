@@ -194,9 +194,19 @@ sudo tmutil disablelocal
 # Use OpenDNS servers
 sudo networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
 
+
+# -- [ Menubar ]--
+
+# Always display Volume menubar item
+defaults write com.apple.systemuiserver.plist menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
 # ============================================================
 # Apply the changes
 #
+
+# Force re-syncing of new preferences
+killall cfprefsd
+
 for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer"; do
 	killall "${app}" > /dev/null 2>&1
 done
