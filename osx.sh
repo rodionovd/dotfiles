@@ -194,12 +194,11 @@ sudo tmutil disablelocal
 # Use OpenDNS servers
 sudo networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
 
-# -- [Keyboard Shortcuts ]--
+# -- [Keyboard and Trackpad ]--
 
 # Select next source in input menu with ⌘Space
 PLISTBUDDY=/usr/libexec/plistbuddy
 FILE=~/Library/Preferences/com.apple.symbolichotkeys.plist
-
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:enabled bool YES" $FILE
 $PLISTBUDDY -c "delete :AppleSymbolicHotKeys:61:value:parameters" $FILE
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters array" $FILE
@@ -207,6 +206,9 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters array" $FILE
 	$PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters:1 integer 49" $FILE
 	$PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters:2 integer 1048576" $FILE
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
+
+# Enable three-finger drag on Trackpad
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
 # --[ Menubar ]--
 
