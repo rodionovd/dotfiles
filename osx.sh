@@ -214,6 +214,17 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 FILE=~/Library/Preferences/com.apple.systemuiserver.plist
 $PLISTBUDDY -c "add :menuExtras:0 string '/System/Library/CoreServices/Menu Extras/Volume.menu'" $FILE
 
+# -- [ Login Items ]--
+
+function add_login_item {
+	osascript -e "tell application \"System Events\" to make login item at end with properties {path: \"$1\", hidden:true}"
+}
+
+add_login_item "$HOME/Applications/iTerm.app"
+add_login_item "/Applications/Safari.app"
+add_login_item "/Applications/Mail.app"
+
+
 # ============================================================
 # Apply the changes
 #
