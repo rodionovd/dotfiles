@@ -211,7 +211,8 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 # -- [ Menubar ]--
 
 # Always display Volume menubar item
-defaults write com.apple.systemuiserver.plist menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
+FILE=~/Library/Preferences/com.apple.systemuiserver.plist
+$PLISTBUDDY -c "add :menuExtras:0 string '/System/Library/CoreServices/Menu Extras/Volume.menu'" $FILE
 
 # ============================================================
 # Apply the changes
