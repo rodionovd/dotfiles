@@ -83,6 +83,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool false
 
 # Allow text selection in Quick Look
+# FIXME(rodionovd): doesn't work on 10.11 El Capitan (rdar://23062430)
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # When performing a search, search the current folder by default
