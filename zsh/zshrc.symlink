@@ -53,6 +53,15 @@ function genpass() {
         openssl rand -base64 $1
     fi
 }
+# Verify that my Xcode came from a trustworthy source
+function checkxcode() {
+    if [[ -d "/Applications/Xcode-beta.app" ]] then
+        spctl --assess --verbose "/Applications/Xcode-beta.app"
+    fi
+    if [[ -d "/Applications/Xcode.app" ]] then
+        spctl --assess --verbose "/Applications/Xcode.app"
+    fi
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
