@@ -62,6 +62,37 @@ function checkxcode() {
         spctl --assess --verbose "/Applications/Xcode.app"
     fi
 }
+# Extract each architecture of a fat library into its own directory
+function dump_fat_lib() {
+	if [[ $# != 1 ]]; then
+		echo "Usage: dump_fat_lib Foo.lib"
+		return 1
+	fi
+    if [[ ! -f $1 ]]; then
+        echo "[!] No such file or directory: $1"
+        return 1
+    fi
+	# We don't know in advance what architectures this library supports,
+	# so go figure this out first
+	actual_targets=()
+	file_info=$(file $1)
+	for arch in "x86_64" "i386" "armv7" "arm64"; do
+		if [[ $file_info == *${arch}* ]]; then
+			actual_targets+=(${arch})
+		fi
+	done
+	# Then create a directory for each architecture and extract
+	# the library's contents there
+	for arch in "${actual_targets[@]}"; do
+        echo "Dumping ${arch}"
+		lipo -thin ${arch} -output ${arch}.ar $1
+		mkdir -p ${arch}
+		(cd ${arch} && ar -x ../${arch}.ar)
+		rm ${arch}.ar
+	done
+    echo "Done! You're awesome :)"
+	return 0
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
