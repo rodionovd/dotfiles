@@ -16,7 +16,7 @@ for file in "config.cson" "init.coffee" "keymap.cson" "snippets.cson" "styles.le
 done
 
 echo "• Installing Atom packages"
-for pkg in "autocomplete-python" "spacegray-dark-syntax" "travis-ci-status" "dash" do
+for pkg in "autocomplete-python" "spacegray-dark-syntax" "travis-ci-status" "dash" "language-lua" "language-applescript" "language-scheme" do
 	apm install "${pkg}"
 done
 #
