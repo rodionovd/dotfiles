@@ -197,6 +197,32 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine backups
 sudo tmutil disablelocal
 
+# --[ Xcode ]--
+
+# Trim trailing whitespace
+defaults write com.apple.dt.Xcode DVTTextEditorTrimTrailingWhitespace -bool true
+
+# Trim whitespace only lines
+defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+
+# Show line numbers
+defaults write com.apple.dt.Xcode DVTTextShowLineNumbers -bool true
+
+# Show ruler at 100 chars
+defaults write com.apple.dt.Xcode DVTTextShowPageGuide -bool true
+defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 100
+
+# Disable source control
+defaults write com.apple.dt.Xcode IDESourceControlEnableSourceControl_7_1 -bool false
+
+# Show build times in toolbar
+# http://cocoa.tumblr.com/post/131023038113/build-speed
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool true
+
+# Power!
+defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks -int `sysctl -n hw.ncpu`
+
+
 # --[ Network ]--
 
 # Use OpenDNS servers
@@ -242,7 +268,7 @@ add_login_item "/Applications/Mail.app"
 # Force re-syncing of new preferences
 killall cfprefsd
 
-for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer"; do
+for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer" "Xcode"; do
 	killall "${app}" > /dev/null 2>&1
 done
 
