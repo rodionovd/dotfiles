@@ -48,6 +48,9 @@ defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
 # Reduce Transparency
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Disable Sound Effects on Boot
+sudo nvram SystemAudioVolume=" "
+
 # --[ Trackpad ]--
 
 # Enable tap to click
