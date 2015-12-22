@@ -123,6 +123,7 @@ defaults write com.apple.dock magnification -bool false
 
 # Autohide Dock
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.Dock autohide-delay -float 0
 
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 18
