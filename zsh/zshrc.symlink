@@ -14,6 +14,11 @@ alias o="open ."
 alias hop="hopper -o -a -M -F -X -e"
 # Open an i386 executable in Hopper Disassembler
 alias hop86="hopper -o -a -M -f -x -e"
+# Open an executable in MachOView
+function macho() {
+    # Usage: macho /Application/Notes.app/Contents/MacOS/Notes
+    open $1 -a MachOView
+}
 # Open a 64-bit Cocoa application in Hopper Disassembler
 function hopa() {
     # Usage: hopa /Application/Notes.app
