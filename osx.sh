@@ -51,6 +51,21 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # Disable Sound Effects on Boot
 sudo nvram SystemAudioVolume=" "
 
+# --[ Locale ]--
+
+# I use Russian units in English with USD for currency
+defaults write NSGlobalDomain AppleLocale -string "en_RU@currency=USD"
+
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+
+defaults write NSGlobalDomain AppleMetricUnits -int 1
+
+defaults write NSGlobalDomain Country -string "US"
+
+# Use English and Russian languagues, in this particular order
+defaults write NSGlobalDomain AppleLanguages -array en ru
+
+
 # --[ Trackpad ]--
 
 # Enable tap to click
