@@ -259,6 +259,22 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 # Enable three-finger drag on Trackpad
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
+# Setup my favourite text replacements
+# 1) shrugg -> ¯\_(ツ)_/¯
+defaults write -g NSUserDictionaryReplacementItems -array-add \
+	'{
+		on=1;
+		replace="shrugg";
+		with="\U00af\\_(\U30c4)_/\U00af";
+	}'
+# 2) hmhm -> ಠ_ಠ
+defaults write -g NSUserDictionaryReplacementItems -array-add \
+	'{
+		on=1;
+		replace="hmhm";
+		with="\U0ca0_\U0ca0";
+	}'
+
 # --[ Menubar ]--
 
 # Always display Volume menubar item
