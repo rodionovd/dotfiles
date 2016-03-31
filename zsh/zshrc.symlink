@@ -99,6 +99,23 @@ function dump_fat_lib() {
 	return 0
 }
 
+function dump_fat() {
+    if [[ $# != 1 ]]; then
+		echo "Usage: dump_fat MyExecutable"
+		return 1
+	fi
+    target=$1
+    for arch in "x86_64" "i386" "armv7" "arm64"; do
+    	lipo "${target}" -verify_arch "${arch}"
+    	if [[ $? -eq 0 ]]; then
+    		echo "Dumping ${arch} from a fat binary ${target}"
+            base=$(basename "${target}")
+    		lipo -thin "${arch}" -output "${base}_${arch}" "${target}"
+        fi
+    done
+    echo "Done!"
+}
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
