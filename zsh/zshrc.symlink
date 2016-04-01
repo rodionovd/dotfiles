@@ -59,7 +59,7 @@ function genpass() {
     fi
 }
 # Verify that my Xcode came from a trustworthy source
-function checkxcode() {
+function xcode-verify() {
     if [[ -d "/Applications/Xcode-beta.app" ]] then
         spctl --assess --verbose "/Applications/Xcode-beta.app"
     fi
