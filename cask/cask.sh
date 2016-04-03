@@ -3,6 +3,8 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd)
 
+brew cask doctor
+
 # Install some OS X apps using Cask
 echo "• Installing Homebrew Cask and some apps"
 brew install caskroom/cask/brew-cask
@@ -19,4 +21,3 @@ then
 	brew untap caskroom/versions
 fi
 brew cask cleanup
-brew cask doctor
