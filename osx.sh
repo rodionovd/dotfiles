@@ -51,6 +51,9 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # Disable Sound Effects on Boot
 sudo nvram SystemAudioVolume=" "
 
+# Don't open any apps when attaching a "camera"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+
 # --[ Locale ]--
 
 # I use Russian units in English with USD for currency
