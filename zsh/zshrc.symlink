@@ -139,6 +139,9 @@ source $ZSH/oh-my-zsh.sh
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
+# Install casks into /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/Cellar/ruby/2.1.0/binv
 
