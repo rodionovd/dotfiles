@@ -141,6 +141,8 @@ bindkey -M vicmd v edit-command-line
 
 # Install casks into /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Opt-out from sending any analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/Cellar/ruby/2.1.0/binv
