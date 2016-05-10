@@ -9,7 +9,7 @@ ZSH_THEME="rodionovd"
 # Aliases and functions
 alias cl="clear"
 # Remove "._" resource files
-alias remove_dot_underscore_files="find . -type f -name "._*" -delete"
+alias remove_dot_underscore_files="find . -type f -name \"._*\" -delete"
 # Open current directory in Finder
 alias o="open ."
 # Open an x86_64 executable in Hopper Disassembler
