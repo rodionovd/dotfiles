@@ -34,7 +34,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool true
 
 # Disable "close windows when quitting an app"
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
 
 # Enable Graphite appearance
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
