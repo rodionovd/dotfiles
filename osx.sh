@@ -292,20 +292,10 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
 # Setup my favourite text replacements
-# 1) shrugg -> ¯\_(ツ)_/¯
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-	'{
-		on=1;
-		replace="shrugg";
-		with="\U00af\\_(\U30c4)_/\U00af";
-	}'
-# 2) hmhm -> ಠ_ಠ
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-	'{
-		on=1;
-		replace="hmhm";
-		with="\U0ca0_\U0ca0";
-	}'
+shortcuts new --force "shrugg" "¯\_(ツ)_/¯"
+shortcuts new --force "hmhm" "ಠ_ಠ"
+
+# TODO: install custom keyboard layout (Ilya Birman Typography)
 
 # --[ Menubar ]--
 
@@ -323,6 +313,8 @@ add_login_item "$HOME/Applications/iTerm.app"
 add_login_item "/Applications/Safari.app"
 add_login_item "/Applications/Mail.app"
 
+# TODO: notifications (Notifications.prefPane && /usr/sbin/usernoted)
+# TODO: notification center widgets (com.apple.notificationcenterui.plist)
 
 # ============================================================
 # Apply the changes
