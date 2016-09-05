@@ -336,6 +336,5 @@ echo "• Install all available software updates"
 if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
 	echo "Your system is up to date 🌟"
 else
-	echo "Installing updates…"
 	sudo softwareupdate --install --all
 fi
