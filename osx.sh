@@ -338,3 +338,15 @@ if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
 else
 	sudo softwareupdate --install --all
 fi
+
+# ============================================================
+# Full-disk encryption
+# Courtesy of MikeMcQuaid: https://github.com/MikeMcQuaid/strap
+
+if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
+	echo "• Full-disk encryption is already enabled or will be enabled after the next restart"
+else
+	echo "• Enabling full-disk encryption (FileVault)"
+	sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault_Recovery_Key.txt"
+	echo "⚠️ Full-disk encryption will be enabled after the next restart"
+fi
