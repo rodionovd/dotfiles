@@ -327,9 +327,3 @@ killall cfprefsd
 for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer" "Xcode"; do
 	killall "${app}" > /dev/null 2>&1
 done
-
-# fix-macosx by Landon Fuller
-echo "• Applying fix-macosx by Landon Fuller"
-git clone https://github.com/fix-macosx/fix-macosx ./fix-macosx
-(cd ./fix-macosx && python fix-macosx.py)
-rm -Rf ./fix-macosx
