@@ -296,7 +296,7 @@ shortcuts new --force "shrugg" "¯\_(ツ)_/¯"
 shortcuts new --force "hmhm" "ಠ_ಠ"
 shortcuts new --force "++1" "👍🏼"
 
-# TODO: install custom keyboard layout (Ilya Birman Typography)
+# TODO: install custom keyboard layout (Ilya Birman Typography Layout)
 
 # --[ Menubar ]--
 
