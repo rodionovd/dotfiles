@@ -329,6 +329,10 @@ for app in "Activity Monitor" "Finder" "Messages" "Safari" "SystemUIServer" "Xco
 	killall "${app}" > /dev/null 2>&1
 done
 
+for app in "Safari"; do
+	open -a "${app}"
+done
+
 # ============================================================
 # Software Updates
 #
