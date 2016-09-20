@@ -15,6 +15,9 @@ sudo osascript <<EOD
   end tell
 EOD
 
+echo "• Opening https://developer.apple.com/downloads/ so you can download the latest Xcode app"
+open https://developer.apple.com/downloads/
+
 # Also install Xcode.app itself via `xcode-install` by Boris Bügling:
 # https://github.com/neonichu/xcode-install
 
