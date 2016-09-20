@@ -252,6 +252,9 @@ defaults write com.apple.dt.Xcode IDESourceControlEnableSourceControl_7_1 -bool 
 # http://cocoa.tumblr.com/post/131023038113/build-speed
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool true
 
+# Use Sunset color theme
+defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme -string "Sunset.dvtcolortheme"
+
 # Power!
 defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks -int `sysctl -n hw.ncpu`
 

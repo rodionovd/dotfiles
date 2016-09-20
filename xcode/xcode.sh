@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd)
+
 printf "• Installing Xcode command-line tools.\n"
 xcode-select --install
 
@@ -15,13 +18,19 @@ sudo osascript <<EOD
   end tell
 EOD
 
+echo "• Install Xcode color themes"
+rm -rf ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+mkdir -p ~/Library/Developer/Xcode/UserData
+
+ln -s -F -i "$DOTFILES_ROOT/xcode/FontAndColorThemes.symlink" ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+
 echo "• Opening https://developer.apple.com/downloads/ so you can download the latest Xcode app"
 open https://developer.apple.com/downloads/
 
 # Also install Xcode.app itself via `xcode-install` by Boris Bügling:
 # https://github.com/neonichu/xcode-install
 
-# XCODES_TO_INSTALL=("6.4")
+# XCODES_TO_INSTALL=("8.0")
 #
 # USER=$(/usr/bin/security find-generic-password -wa "XCODE_INSTALL_USER")
 # if [[ $? == 0 ]]; then
