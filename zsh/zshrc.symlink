@@ -141,9 +141,7 @@ source $ZSH/oh-my-zsh.sh
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-# Install casks into /Applications
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# Opt-out from sending any analytics
+# Opt-out from sending any Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
 # Customize to your needs...

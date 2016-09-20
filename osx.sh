@@ -310,7 +310,7 @@ function add_login_item {
 	osascript -e "tell application \"System Events\" to make login item at end with properties {path: \"$1\", hidden:true}"
 }
 
-add_login_item "$HOME/Applications/iTerm.app"
+add_login_item "/Applications/iTerm.app"
 add_login_item "/Applications/Safari.app"
 add_login_item "/Applications/Mail.app"
 
