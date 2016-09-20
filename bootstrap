@@ -20,6 +20,7 @@ sh "$DOTFILES_ROOT/atom/atom.sh"
 sh "$DOTFILES_ROOT/hammerspoon/hammerspoon.sh"
 
 sh "$DOTFILES_ROOT/osx.sh"
+sh "$DOTFILES_ROOT/fonts/fonts.sh"
 
 # Install my private dotfiles as well
 if [[ "$USER" == "rodionovd" ]]; then
