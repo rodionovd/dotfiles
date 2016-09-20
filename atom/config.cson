@@ -1,7 +1,12 @@
 "*":
-  welcome:
-    showOnStartup: false
+  "atom-scrolloff":
+    scrolloff: 7
+  "autocomplete-plus": {}
+  "autocomplete-python": {}
+  autosave:
+    enabled: true
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "metrics"
       "autoflow"
@@ -17,32 +22,30 @@
       "one-dark-ui"
       "spacegray-dark-syntax"
     ]
-  "tree-view":
-    hideIgnoredNames: true
   editor:
+    backUpBeforeSaving: true
+    fontFamily: "Monoid"
+    fontSize: 12
     invisibles: {}
-    tabLength: 4
+    scrollSensitivity: 25
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
     stripTrailingWhitespace:
       singleTrailingNewline: true
-    softWrap: true
-    scrollSensitivity: 25
-    fontFamily: "Monaco"
-    fontSize: 12
-    showInvisibles: true
-    showIndentGuide: true
-    backUpBeforeSaving: true
-  "autocomplete-python": {}
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  "autocomplete-plus": {}
-  "todo-show": {}
-  "travis-ci-status": {}
+    tabLength: 4
   "exception-reporting":
     userId: "1428bea9-2829-ac12-e6c8-09465f92ff49"
-  autosave:
-    enabled: true
-  "atom-scrolloff":
-    scrolloff: 7
+  "linter-rubocop":
+    command: "/usr/local/bin/rubocop"
+  "todo-show": {}
+  "travis-ci-status": {}
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
 ".python.source":
   editor:
     autoIndentOnPaste: false
