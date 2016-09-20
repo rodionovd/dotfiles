@@ -16,12 +16,16 @@
 // itself
 atom-text-editor {
     // BECAUSE HEY I GOT USED TO IT
-    font-family: Menlo, Monaco, Inconsolata, Consolas, 'DejaVu Sans Mono', monospace;
+    font-family: 'Hack', Menlo, Monaco, Inconsolata, Consolas, 'DejaVu Sans Mono', monospace;
     line-height: 1.3;
+    // Enable ligatures
+    text-rendering: optimizeLegibility;
 }
+// Disable ligatures inside quoted strings, regexps and
+// on a line under the cursor
+atom-text-editor::shadow .string.quoted,
+atom-text-editor::shadow .string.regexp,
+atom-text-editor::shadow .cursor-line {
 
-// To style other content in the text editor's shadow DOM, use the ::shadow
-// expression
-atom-text-editor::shadow .cursor {
-
+  -webkit-font-feature-settings: "liga" off, "calt" off;
 }
