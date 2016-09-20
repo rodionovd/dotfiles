@@ -15,6 +15,6 @@ fi
 # Install the required stuff
 echo "• Installing Homebrew formulae"
 brew doctor
-for formulae in "git" "zsh" "sqlite" "cloc" "terminal-notifier" "pandoc" "tree" "sshuttle" "rbenv" "autossh" "rodionovd/taps/shortcuts" "mas"; do
+for formulae in "git" "zsh" "sqlite" "cloc" "terminal-notifier" "pandoc" "tree" "sshuttle" "rbenv" "autossh" "rodionovd/taps/shortcuts" "mas" "class-dump"; do
 	brew install "${formulae}"
 done
