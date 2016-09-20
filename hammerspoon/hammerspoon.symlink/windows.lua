@@ -13,7 +13,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "/", function()
     	f.w = max.w * (1 - offset * 2)
     	f.h = max.h * (1 - offset * 2)
     else
-        -- maximize (not a fullscreen mode this)
+        -- maximize
     	f.x = max.x
     	f.y = max.y
     	f.w = max.w
