@@ -51,6 +51,12 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # Disable Sound Effects on Boot
 sudo nvram SystemAudioVolume=" "
 
+# Enable Application layer firewall, logging and "stealth mode"
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo defaults write /Library/Preferences/com.apple.alf allowsignedenabled -bool false
+sudo defaults write /Library/Preferences/com.apple.alf loggingenabled -bool true
+sudo defaults write /Library/Preferences/com.apple.alf stealthenabled -bool true
+
 # Don't open any apps when attaching a "camera"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 
