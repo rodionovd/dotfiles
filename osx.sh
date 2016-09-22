@@ -298,7 +298,9 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:parameters array" $FILE
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:61:value:type string standard" $FILE
 
 # Enable three-finger drag on Trackpad
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+# Tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Setup my favourite text replacements
 shortcuts new --force "shrugg" "¯\_(ツ)_/¯"
