@@ -212,6 +212,9 @@ defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 # Do not preload Top Hits in the background
 defaults write com.apple.Safari PreloadTopHit -bool false
 
+# Show status bar
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true
+
 # --[ Activity Monitor ]--
 
 # Show the main window when launching Activity Monitor
