@@ -137,6 +137,15 @@ chflags nohidden ~/Library
 # Force usage of Finder's list view
 defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
 
+# Desktop icons size
+PLISTBUDDY=/usr/libexec/plistbuddy
+FILE=~/Library/Preferences/com.apple.finder.plist
+$PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:iconSize 36" $FILE
+# Desktop labels size
+$PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:textSize 12" $FILE
+# Always show icon previews
+$PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:showIconPreview true" $FILE
+
 # --[ Dock ]--
 
 # Set Dock to appear on the left
