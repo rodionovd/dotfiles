@@ -31,7 +31,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Enable "Ask to keep changes when closing documents"
-defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool true
+defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool false
 
 # Disable "close windows when quitting an app"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
