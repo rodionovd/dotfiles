@@ -45,6 +45,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Click in the scroll bar: Jump to the spot that's clicked
 defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
 
+# Always prefer tabs to windows when opening documents
+defaults write NSGlobalDomain AppleWindowTabbingMode -string "always"
+
 # Reduce Transparency
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
