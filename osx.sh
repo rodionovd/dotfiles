@@ -279,6 +279,11 @@ defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme -string "Sunset.dv
 # Power!
 defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks -int `sysctl -n hw.ncpu`
 
+# -- [ Mail ]--
+
+# Don't load remote content
+defaults write com.apple.mail-shared DisableURLLoading -bool true
+
 # -- [ Transmission ]--
 
 # Trash original torrent files
