@@ -75,7 +75,7 @@ defaults write NSGlobalDomain AppleMetricUnits -int 1
 defaults write NSGlobalDomain Country -string "US"
 
 # Use English and Russian languagues, in this particular order
-defaults write NSGlobalDomain AppleLanguages -array en ru
+defaults write NSGlobalDomain AppleLanguages -array en-US ru-RU
 
 
 # --[ Trackpad ]--
