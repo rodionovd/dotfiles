@@ -10,8 +10,6 @@ ZSH_THEME="rodionovd"
 alias cl="clear"
 # Remove "._" resource files
 alias remove_dot_underscore_files="find . -type f -name \"._*\" -delete"
-# Open current directory in Finder
-alias o="open ."
 # Open an x86_64 executable in Hopper Disassembler
 alias hop="hopper -o -a -M -F -X -e"
 # Open an i386 executable in Hopper Disassembler
@@ -50,6 +48,14 @@ function timer() {
     fi
     if (( $# == 2 )) then
         (sleep $t && tn "$2" -title "Hey 👋") &
+    fi
+}
+# open(1) on steroids
+function o() {
+    if (( $# == 0 )) then
+        open .
+    else
+        open $1
     fi
 }
 # Random passwords every time
