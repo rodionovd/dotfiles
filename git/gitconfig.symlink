@@ -14,3 +14,5 @@
 	graph = log --graph
 [diff]
 	compactionHeuristic = true
+[diff "plist"]
+	textconv = plutil -convert xml1 -o -
