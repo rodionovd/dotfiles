@@ -152,6 +152,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/Cellar/ruby/2.1.0/binv
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Completition for kill[all] proceses' name
 zstyle ':completion:*:processes' command 'ps -ax'
