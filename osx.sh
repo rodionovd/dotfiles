@@ -343,6 +343,9 @@ function add_login_item {
 add_login_item "/Applications/iTerm.app"
 add_login_item "/Applications/Safari.app"
 add_login_item "/Applications/Mail.app"
+add_login_item "/Applications/Slack.app"
+add_login_item "/Applications/GitHub.app"
+add_login_item "/Applications/Notes.app"
 
 # TODO: notifications (Notifications.prefPane && /usr/sbin/usernoted)
 # TODO: notification center widgets (com.apple.notificationcenterui.plist)
