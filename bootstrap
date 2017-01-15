@@ -14,14 +14,13 @@ sh "$DOTFILES_ROOT/iterm2/iterm2.sh"
 sh "$DOTFILES_ROOT/atom/atom.sh"
 sh "$DOTFILES_ROOT/hammerspoon/hammerspoon.sh"
 
-sh "$DOTFILES_ROOT/osx.sh"
-sh "$DOTFILES_ROOT/fonts/fonts.sh"
-
 # Install my private dotfiles as well
 if [[ "$USER" == "rodionovd" ]]; then
     git clone git@github.com:rodionovd/dotfiles-private.git
     (cd /.dotfiles-private && ./bootstrap)
 fi
+
+sh "$DOTFILES_ROOT/osx.sh"
 
 echo "============================================="
 echo "Don't forget to run ./after_xcode_install.sh "

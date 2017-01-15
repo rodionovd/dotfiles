@@ -1,10 +1,11 @@
-tap 'caskroom/cask'
-tap 'homebrew/bundle'
+# Sources
 tap 'homebrew/core'
-tap 'homebrew/python'
-tap 'homebrew/science'
-tap 'homebrew/boneyard'
-tap 'rodionovd/taps'
+tap 'homebrew/bundle' # for Brewfile
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'homebrew/boneyard' # for class-dump
+tap 'rodionovd/taps' # for shortcuts
+# CLI utilities
 brew 'sqlite'
 brew 'ansible'
 brew 'autossh'
@@ -17,6 +18,7 @@ brew 'rbenv'
 brew 'zsh'
 brew 'class-dump', args: ['HEAD']
 brew 'rodionovd/taps/shortcuts'
+# Apps
 cask '0xed'
 cask 'atom'
 cask 'blockblock'
@@ -44,3 +46,7 @@ cask 'the-unarchiver'
 cask 'virtualbox'
 cask 'vlc'
 cask 'wwdc'
+# Fonts
+cask 'font-fira-code'
+cask 'font-hack'
+cask 'font-monoid'
