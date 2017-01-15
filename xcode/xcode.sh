@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd)
+pushd "$(dirname "$0")"
 
 printf "• Installing Xcode command-line tools.\n"
 xcode-select --install
@@ -22,7 +21,7 @@ echo "• Install Xcode color themes"
 rm -rf ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 mkdir -p ~/Library/Developer/Xcode/UserData
 
-ln -s -F -i "$DOTFILES_ROOT/xcode/FontAndColorThemes.symlink" ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+ln -s -F -i ./FontAndColorThemes.symlink ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 
 echo "• Opening https://developer.apple.com/downloads/ so you can download the latest Xcode app"
 open https://developer.apple.com/downloads/
@@ -44,3 +43,5 @@ open https://developer.apple.com/downloads/
 #         xcode-install cleanup
 #     fi
 # fi
+
+popd

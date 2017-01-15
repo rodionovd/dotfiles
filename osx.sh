@@ -325,14 +325,6 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool t
 # Tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
-# Setup my favourite text replacements
-if [[ -f $(which shortcuts) ]];
-then
-	shortcuts new --force "shrugg" "¯\_(ツ)_/¯"
-	shortcuts new --force "hmhm" "ಠ_ಠ"
-	shortcuts new --force "++1" "👍🏼"
-fi
-
 # TODO: install custom keyboard layout (Ilya Birman Typography Layout)
 open http://ilyabirman.ru/projects/typography-layout/
 

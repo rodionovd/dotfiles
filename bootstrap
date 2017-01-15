@@ -25,6 +25,7 @@ if [[ "$USER" == "rodionovd" ]]; then
     (cd /.dotfiles-private && ./bootstrap)
 fi
 
-echo "=================================="
-echo "Done. Have a nice day!            "
-echo "=================================="
+echo "============================================="
+echo "Don't forget to run ./after_xcode_install.sh "
+echo "when you install Xcode                     :)"
+echo "============================================="
