@@ -11,7 +11,7 @@ sh "$DOTFILES_ROOT/vim/vim.sh"
 sh "$DOTFILES_ROOT/git/git.sh"
 # XXX: some things from brew require Xcode which is not installed yet
 # sh "$DOTFILES_ROOT/brew.sh"
-sh "$DOTFILES_ROOT/cask.sh"
+# sh "$DOTFILES_ROOT/cask.sh"
 sh "$DOTFILES_ROOT/pip.sh"
 sh "$DOTFILES_ROOT/gems.sh"
 sh "$DOTFILES_ROOT/xcode/xcode.sh"
