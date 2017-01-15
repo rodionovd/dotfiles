@@ -21,7 +21,7 @@ sh "$DOTFILES_ROOT/fonts/fonts.sh"
 
 # Install my private dotfiles as well
 if [[ "$USER" == "rodionovd" ]]; then
-    git clone https://github.com/rodionovd/dotfiles-private.git
+    git clone git@github.com:rodionovd/dotfiles-private.git
     (cd /.dotfiles-private && ./bootstrap)
 fi
 
