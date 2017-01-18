@@ -21,7 +21,7 @@ echo "• Install Xcode color themes"
 rm -rf ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 mkdir -p ~/Library/Developer/Xcode/UserData
 
-ln -s -F -i ./FontAndColorThemes.symlink ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+ln -s -F -i "$(pwd)"/FontAndColorThemes.symlink ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 
 echo "• Opening https://developer.apple.com/downloads/ so you can download the latest Xcode app"
 open https://developer.apple.com/downloads/
