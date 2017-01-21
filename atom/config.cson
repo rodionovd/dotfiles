@@ -18,6 +18,7 @@
       ".DS_Store"
       "*.pyc"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "spacegray-dark-syntax"
