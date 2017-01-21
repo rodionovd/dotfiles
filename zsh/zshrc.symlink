@@ -140,7 +140,7 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git,osx,brew,brew-cask,sublime)
+plugins=(git sublime)
 
 source $ZSH/oh-my-zsh.sh
 
