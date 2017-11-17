@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>exposed.internals.alfred.base-converter</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>2B7B62F7-4D34-4E44-B247-BDC70F4A2DDD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>96E0FDA8-3E89-4864-ABE1-8412AAFDAE33</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Internals Exposed</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Hex to anything</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>x</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>…</string>
+				<key>script</key>
+				<string>require 'json'
+
+query = ARGV[0]
+
+raw = query.to_i(16)
+
+dec   = query.to_i(16).to_s(10)
+bin   = query.to_i(16).to_s(2)
+
+ascii = "."
+if raw &gt;= 20 &amp;&amp; raw &lt;= 0x7E
+	ascii = raw.chr
+end
+
+items = [{
+    'title' =&gt; "#{dec}",
+    'subtitle' =&gt; "Decimal",
+	'arg' =&gt; "#{dec}",
+    'text' =&gt; {
+        'copy' =&gt; "#{dec}",
+        'largetype' =&gt; "#{dec}"
+    },
+},
+{
+    'title' =&gt; "#{bin}",
+    'subtitle' =&gt; "Binary",
+	'arg' =&gt; "#{bin}",
+    'text' =&gt; {
+        'copy' =&gt; "#{bin}",
+        'largetype' =&gt; "#{bin}"
+    },
+},
+{
+    'title' =&gt; "#{ascii}",
+    'subtitle' =&gt; "ASCII",
+	'arg' =&gt; "#{ascii}",
+    'text' =&gt; {
+        'copy' =&gt; "#{ascii}",
+        'largetype' =&gt; "#{ascii}"
+    },
+}]
+
+output = {
+	'items' =&gt; items
+}
+
+print output.to_json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Please enter a number</string>
+				<key>title</key>
+				<string>Convert from hex to dec/bin/asciii</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2B7B62F7-4D34-4E44-B247-BDC70F4A2DDD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>96E0FDA8-3E89-4864-ABE1-8412AAFDAE33</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Keywords are one of Alfred's most commonly used and most useful ways of launching actions. Set a keyword and connect it to the action(s) you want to perform.
+
+Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
+	<key>uidata</key>
+	<dict>
+		<key>2B7B62F7-4D34-4E44-B247-BDC70F4A2DDD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>96E0FDA8-3E89-4864-ABE1-8412AAFDAE33</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>http://internals.exposed</string>
+</dict>
+</plist>
