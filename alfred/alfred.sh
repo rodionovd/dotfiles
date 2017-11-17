@@ -9,7 +9,7 @@ echo "• Installing Alfred preferences"
 ALFRED_DIR="${HOME}/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
 if [[ -d "$ALFRED_DIR" ]]; then
     echo "• Backing up the existing Alfred.alfredpreferences"
-	mv -v "$ALFRED_DIR" "$ALFRED_DIR"
+	mv -v "$ALFRED_DIR" "$ALFRED_DIR".bak
 fi
 # Symlink the actual preferences container
 ln -s -F -i "$DOTFILES_ROOT/alfred/Alfred.alfredpreferences.symlink" "$ALFRED_DIR"
