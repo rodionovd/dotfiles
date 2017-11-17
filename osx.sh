@@ -48,9 +48,6 @@ defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
 # Always prefer tabs to windows when opening documents
 defaults write NSGlobalDomain AppleWindowTabbingMode -string "always"
 
-# Reduce Transparency
-defaults write com.apple.universalaccess reduceTransparency -bool true
-
 # Disable Sound Effects on Boot
 sudo nvram SystemAudioVolume=" "
 
@@ -151,7 +148,7 @@ $PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:showIconPreview true" 
 
 # --[ Dock ]--
 
-# Set Dock to appear on the left
+# Set Dock to appear on the right
 defaults write com.apple.dock orientation -string right
 
 # Disable Dock icon magnification
@@ -234,6 +231,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
+
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
@@ -281,7 +279,7 @@ defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileT
 
 # -- [ Mail ]--
 
-# Don't load remote content
+# Don't load remote content by default
 defaults write com.apple.mail-shared DisableURLLoading -bool true
 
 # -- [ Transmission ]--
@@ -320,13 +318,6 @@ $PLISTBUDDY -c "add :AppleSymbolicHotKeys:60:value:parameters array" $FILE
 	$PLISTBUDDY -c "add :AppleSymbolicHotKeys:60:value:parameters:2 integer 1048576" $FILE
 $PLISTBUDDY -c "add :AppleSymbolicHotKeys:60:value:type string standard" $FILE
 
-# Enable three-finger drag on Trackpad
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-# Tap to click
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-
-# TODO: install custom keyboard layout (Ilya Birman Typography Layout)
-open http://ilyabirman.ru/projects/typography-layout/
 
 # --[ Menubar ]--
 
@@ -343,7 +334,6 @@ function add_login_item {
 add_login_item "/Applications/iTerm.app"
 add_login_item "/Applications/Safari.app"
 add_login_item "/Applications/Mail.app"
-add_login_item "/Applications/Slack.app"
 add_login_item "/Applications/GitHub.app"
 add_login_item "/Applications/Notes.app"
 
