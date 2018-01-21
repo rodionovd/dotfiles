@@ -17,6 +17,7 @@ brew 'python3'
 brew 'rbenv'
 brew 'zsh'
 brew 'carthage'
+brew 'cocoapods'
 #brew 'class-dump', args: ['HEAD']
 brew 'rodionovd/taps/shortcuts'
 # Apps
