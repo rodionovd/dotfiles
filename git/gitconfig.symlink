@@ -4,10 +4,12 @@
 	signingkey = DF498625
 [core]
 	excludesfile = ~/.gitignore_global
+	compression = 9
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [alias]
 	pushall = ! git remote | xargs -L1 git push --all
 	st = status
@@ -66,3 +68,6 @@
   selected = normal
   separator = red bold
   linenumber = normal
+[pack]
+	packSizeLimit = 50m
+	windowMemory = 50m
