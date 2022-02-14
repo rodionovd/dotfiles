@@ -146,6 +146,9 @@ $PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:textSize 12" $FILE
 # Always show icon previews
 $PLISTBUDDY -c "Set :DesktopViewSettings:IconViewSettings:showIconPreview true" $FILE
 
+# Adjust toolbar title rollover delay
+defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
+
 # --[ Dock ]--
 
 # Set Dock to appear on the right
