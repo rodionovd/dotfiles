@@ -164,6 +164,9 @@ defaults write com.apple.Dock autohide-delay -float 0
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 16
 
+# Don’t show recent applications in Dock
+ defaults write com.apple.dock show-recents -bool false
+
 # --[ Safary ]--
 
 # Disable Java
