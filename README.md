@@ -9,6 +9,8 @@ Feel free to copy-paste something.
 As simple as that:
 
 ```bash
+# (optional, if you need git)
+# xcode-select --install
 git clone https://github.com/rodionovd/dotfiles.git ~/.dotfiles
 (cd ~/.dotfiles && ./bootstrap)
 ```
