@@ -1,9 +1,8 @@
 # Sources
 tap 'homebrew/core'
 tap 'homebrew/bundle' # for Brewfile
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'homebrew/boneyard' # for class-dump
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'rodionovd/taps' # for shortcuts
 
 # Runtimes
@@ -13,7 +12,7 @@ brew 'openjdk'
 
 # Utils
 brew 'carthage'
-brew 'class-dump', args: ['HEAD']
+#brew 'class-dump', args: ['HEAD']
 brew 'cocoapods'
 brew 'fastlane'
 brew 'git'
