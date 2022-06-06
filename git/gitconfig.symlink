@@ -1,7 +1,6 @@
 [user]
 	name = Dmitry Rodionov
 	email = i.am.rodionovd@gmail.com
-	signingkey = DF498625
 [core]
 	excludesfile = ~/.gitignore_global
 	compression = 9
@@ -11,7 +10,7 @@
 	required = true
 	process = git-lfs filter-process
 [alias]
-	pushall = ! git remote | xargs -L1 git push --all
+	co = checkout
 	st = status
 	graph = log --graph
 [diff]
@@ -68,6 +67,5 @@
   selected = normal
   separator = red bold
   linenumber = normal
-[pack]
-	packSizeLimit = 50m
-	windowMemory = 50m
+[pull]
+	rebase = merges
