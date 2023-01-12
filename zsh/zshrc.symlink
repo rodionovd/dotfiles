@@ -141,7 +141,7 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git sublime)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -174,4 +174,6 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
