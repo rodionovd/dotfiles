@@ -69,3 +69,9 @@
   linenumber = normal
 [pull]
 	rebase = merges
+[init]
+	defaultBranch = main
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
