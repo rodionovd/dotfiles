@@ -15,6 +15,7 @@
 	graph = log --graph
 [diff]
 	compactionHeuristic = true
+	algorithm = histogram
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 [color]
@@ -75,3 +76,5 @@
 	sort = -committerdate
 [column]
 	ui = auto
+[merge]
+	conflictstyle = zdiff3
