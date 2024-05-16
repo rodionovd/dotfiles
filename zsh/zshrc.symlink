@@ -150,7 +150,6 @@ bindkey -M vicmd v edit-command-line
 
 # Opt-out from sending analytics and usage for package managers
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=0
 export COCOAPODS_DISABLE_STATS=true
 export FASTLANE_OPT_OUT_USAGE=1
 export FASTLANE_SKIP_UPDATE_CHECK=1
