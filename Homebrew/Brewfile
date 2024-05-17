@@ -5,7 +5,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
 # Runtimes
-brew 'python'
+brew 'python3'
 brew 'ruby'
 brew 'openjdk'
 
