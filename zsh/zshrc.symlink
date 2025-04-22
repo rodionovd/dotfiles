@@ -9,6 +9,7 @@ ZSH_THEME="rodionovd"
 
 # Aliases and functions
 alias cl="clear"
+alias сд=cl
 # Remove "._" resource files
 alias remove_dot_underscore_files="find . -type f -name \"._*\" -delete"
 # Open an x86_64 executable in Hopper Disassembler
