@@ -1,7 +1,3 @@
-# Sources
-tap 'homebrew/core'
-tap 'homebrew/cask'
-
 # Development
 brew 'git-lfs'
 brew 'git'
@@ -44,3 +40,10 @@ cask 'utm'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'xcodes'
+
+# VSCode extensions
+vscode 'monokai.theme-monokai-pro-vscode'
+vscode 'streetsidesoftware.code-spell-checker'
+vscode 'ms-vscode.live-server'
+vscode 'waderyan.gitblame'
+vscode 'github.vscode-github-actions'

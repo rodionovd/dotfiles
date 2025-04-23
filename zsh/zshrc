@@ -1,0 +1,73 @@
+#
+# Locale
+#
+export LC_CTYPE="UTF-8"
+export LANG=en_US.UTF-8
+
+#
+# Opt-outs
+#
+export HOMEBREW_NO_ANALYTICS=1
+export COCOAPODS_DISABLE_STATS=true
+export FASTLANE_OPT_OUT_USAGE=1
+export FASTLANE_SKIP_UPDATE_CHECK=1
+export FASTLANE_HIDE_CHANGELOG=1
+
+# 
+# oh-my-zsh configuration
+# 
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="rodionovd"
+
+# Disable auto-updates and nags
+zstyle ':omz:update' mode disabled
+zstyle ':omz:update' mode auto
+
+COMPLETION_WAITING_DOTS="true"
+plugins=()
+source $ZSH/oh-my-zsh.sh
+
+#
+# Various autocomplete options
+#
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# Completition for kill[all] proceses' name
+zstyle ':completion:*:processes' command 'ps -ax'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;32'
+zstyle ':completion:*:kill:*'   force-list always
+zstyle ':completion:*:processes-names' command 'ps -e -o comm='
+zstyle ':completion:*:killall:*'   force-list always
+
+#
+# Add some colors for man(1)
+#
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# 
+# Shortcuts
+# 
+alias {cl,сд}="clear"
+alias qq="xattr -rd com.apple.quarantine"
+
+# Same as open(1), but reveals `pwd` in Finder when invoked without arguments
+function o() {
+    if (( $# == 0 )) then
+        open .
+    else
+        open $1
+    fi
+}
+
+# 
+# PATH
+# 
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/sbin"
+eval "$(/opt/homebrew/bin/brew shellenv)"

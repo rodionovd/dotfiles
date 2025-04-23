@@ -1,0 +1,61 @@
+{
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.largeFileOptimizations": false,
+    "files.associations": {
+        "*.cocoascript": "javascript"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.fontFamily": "SF Mono, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "500",
+    "workbench.fontAliasing": "auto",
+    "editor.fontSize": 13,
+    "workbench.colorCustomizations": {
+
+
+    },
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "workbench.colorTheme":"Monokai Pro (Filter Ristretto)" ,
+    "cSpell.language": "en,en-US",
+    "cSpell.userWords": [
+        "alloc",
+        "autoresizing",
+        "bridgesupport",
+        "cocoascript",
+        "decompile",
+        "decompiler",
+        "dmitry",
+        "eyeroll",
+        "Ghostty",
+        "ideomatic",
+        "instancetype",
+        "ivar",
+        "ivars",
+        "lldb",
+        "Nonnull",
+        "objc",
+        "pseudocode",
+        "readwrite",
+        "rodionov",
+        "runtimes",
+        "Sansonetti",
+        "shellcheck",
+        "Siri",
+        "sketchplugin",
+        "struct",
+        "structs",
+        "subview",
+        "superview",
+        "Sympli",
+        "Tietze",
+        "trackpad",
+        "trackpads"
+    ],
+    "cSpell.enableFiletypes": [
+        "xml"
+    ],
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
+    "chat.commandCenter.enabled": false,
+    "makefile.configureOnOpen": false,
+}

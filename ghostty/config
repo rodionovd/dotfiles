@@ -1,0 +1,6 @@
+theme = Subliminal
+cursor-color = aqua
+
+auto-update = check
+
+macos-titlebar-style = native

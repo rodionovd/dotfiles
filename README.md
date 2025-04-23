@@ -1,18 +1,16 @@
 # My dotfiles
 
-In this repo are my common dotfiles for all the stuff I use everyday.
-Feel free to copy-paste something.
+Running
 
-
-### Install
-
-As simple as that:
-
-```bash
-# (optional, if you need git)
-# xcode-select --install
-git clone https://github.com/rodionovd/dotfiles.git ~/.dotfiles
-(cd ~/.dotfiles && ./bootstrap)
+```sh
+cd dotfiles
+sh ./install.sh
 ```
 
-:shipit:
+will:
+
+- set some vital macOS defaults
+- install some software
+- configure the terminal and shell
+- configure code editors: VSCode, Xcode and vim (lol)
+- may also do something else
