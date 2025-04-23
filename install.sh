@@ -9,7 +9,6 @@ echo "=================================="
 
 sh "./macos.sh"
 
-# brew (this will also install xcode command line tools & git?)
 echo "=================================="
 echo "Step 2: Installing Homebrew"
 echo "=================================="
