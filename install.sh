@@ -28,7 +28,7 @@ echo "=================================="
 echo "Step 4: Installing oh-my-zsh"
 echo "=================================="
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 ln -s -F -f "$ROOT/zsh/zshrc" ~/.zshrc
 ln -s -F -f "$ROOT/zsh/rodionovd.zsh-theme" ~/.oh-my-zsh/themes/rodionovd.zsh-theme
 
@@ -52,4 +52,5 @@ ln -s -F -f "$ROOT/vscode/settings.json" ~/Library/Application\ Support/Code/Use
 echo "=================================="
 echo "Fin: Bye Terminal, hello Ghostty"
 echo "=================================="
-open -a Ghostty && killall Terminal
+# Using the full app path here because we've just installed Ghostty and the OS might not have a chance to index it yet
+open -a /Applications/Ghostty.app && killall Terminal

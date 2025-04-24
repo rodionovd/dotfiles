@@ -22,3 +22,9 @@ sh ./install.sh
 - configure the terminal and shell
 - configure code editors: VSCode, Xcode and vim (lol)
 - may also do something else
+
+### Credits
+
+Thank Apple for Virtualization.framework so I can dry-run this whole thing on a clean throwaway machine, instead of live-debugging issues and fixing typos whenever I actually need to install these damn dotfiles once every 5 years or so.
+
+Also kudos to people who manage and deploy macOS at scale. This is absurd.
