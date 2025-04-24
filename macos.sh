@@ -58,18 +58,18 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.WindowManager HideDesktop -bool true
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 # Set ~/Desktop as the default Finder window location
-defaults write -app Finder NewWindowTarget -string "PfDe"
-defaults write -app Finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 # Show all filename extensions
 defaults write -globalDomain AppleShowAllExtensions -bool true
 # Show status bar
-defaults write -app Finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 # Hide path bar
-defaults write -app Finder ShowPathbar -bool false
+defaults write com.apple.finder ShowPathbar -bool false
 # Show the ~/Library folder
 chflags nohidden ~/Library
 # Force usage of Finder's list view
-defaults write -app Finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # ---- ---- ---- 
 # ---- Privacy: Siri, Apple Intelligence, other opt-outs
