@@ -2,7 +2,7 @@
 
 ### Step 1
 
-Grant Terminal.app full disk access via System Settings > Privacy > Full Disk Access.  
+Grant Terminal.app full disk access via System Settings > Privacy > Full Disk Access. This is vital for [`macos.sh`](./macos.sh) as some apps (e.g. Safari) have a protected sandbox container.
 
 > Don't forget to revoke it afterwards. Maybe.
 
