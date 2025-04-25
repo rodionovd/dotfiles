@@ -1,0 +1,6 @@
+Include ~/.ssh/1Password/config
+Include ~/.orbstack/ssh/config
+
+# 1Password as the default SSH agent
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
