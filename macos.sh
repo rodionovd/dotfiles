@@ -93,17 +93,11 @@ defaults write -globalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -globalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -globalDomain NSAutomaticCapitalizationEnabled -bool false
 defaults write -globalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-
 # Disable the inline language indicator
 defaults write kCFPreferencesAnyApplication TSMLanguageIndicatorEnabled 0
-# Use plain text mode for new TextEdit documents
-defaults write -app TextEdit RichText -int 0
-# Open and save files as UTF-8 in TextEdit
-defaults write -app TextEdit PlainTextEncoding -int 4
-defaults write -app TextEdit PlainTextEncodingForWrite -int 4
 
 # ---- ---- ---- 
-# ---- Apps
+# ---- App-specific
 # ---- ---- ---- 
 
 # Xcode
@@ -133,3 +127,8 @@ defaults write -app Mail ConversationViewSortDescending -int 1
 # Screenshots
 mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
+
+# TextEdit
+defaults write -app TextEdit RichText -int 0
+defaults write -app TextEdit PlainTextEncoding -int 4
+defaults write -app TextEdit PlainTextEncodingForWrite -int 4
