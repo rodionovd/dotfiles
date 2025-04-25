@@ -129,3 +129,7 @@ defaults write -app Safari PreloadTopHit -bool false
 
 # Mail
 defaults write -app Mail ConversationViewSortDescending -int 1
+
+# Screenshots
+mkdir -p ~/Desktop/Screenshots
+defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
