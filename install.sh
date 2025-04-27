@@ -35,6 +35,8 @@ echo "=================================="
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 ln -s -F -f "$ROOT/zsh/zshrc" ~/.zshrc
 ln -s -F -f "$ROOT/zsh/rodionovd.zsh-theme" ~/.oh-my-zsh/themes/rodionovd.zsh-theme
+# Disable the "Last login" message; see `-q` option in `man login`
+touch ~/.hushlogin
 
 echo "=================================="
 echo "Step 5: Configuring Ghostty"
