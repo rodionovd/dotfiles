@@ -71,6 +71,9 @@ chflags nohidden ~/Library
 # Force usage of Finder's list view
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# "Hide" the clock menubar item by turning it into a small analog watchface
+defaults write com.apple.menuextra.clock IsAnalog -bool true
+
 # ---- ---- ---- 
 # ---- Privacy: Siri, Apple Intelligence, other opt-outs
 # ---- ---- ---- 
@@ -132,3 +135,16 @@ defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
 defaults write -app TextEdit RichText -int 0
 defaults write -app TextEdit PlainTextEncoding -int 4
 defaults write -app TextEdit PlainTextEncodingForWrite -int 4
+
+# Itsycal
+defaults write -app Itsycal BeepBeepOnTheHour -int 0
+defaults write -app Itsycal ClockFormat -string "H:mm"
+defaults write -app Itsycal MenuBarIconType -int 1
+defaults write -app Itsycal MoCalendarNumRows -int 6
+defaults write -app Itsycal ShowDayOfWeekInIcon -int 1
+defaults write -app Itsycal ShowDaysWithNoEventsInAgenda -int 0
+defaults write -app Itsycal ShowEventDays -int 3
+defaults write -app Itsycal ShowLocation -int 0
+defaults write -app Itsycal ShowMonthInIcon -int 1
+defaults write -app Itsycal SizePreference -int 0
+defaults write -app Itsycal UseColoredDots -int 0
