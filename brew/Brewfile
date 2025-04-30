@@ -27,7 +27,7 @@ cask 'knockknock'
 cask 'latest'
 cask 'macs-fan-control'
 cask 'monodraw'
-cask 'orbstack', postinstall: "${HOMEBREW_PREFIX}/bin/orb start"
+cask 'orbstack'
 cask 'pixelsnap'
 cask 'postico'
 cask 'proxyman'
