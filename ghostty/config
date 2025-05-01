@@ -1,6 +1,11 @@
-theme = Subliminal
+theme = xcodedarkhc
 cursor-color = aqua
+font-size = 13
+window-padding-x = 8
+window-padding-y = 8
+
+# Default window size
+window-width = 100
+window-height = 18
 
 auto-update = check
-
-macos-titlebar-style = native
