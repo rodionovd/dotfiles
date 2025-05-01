@@ -4,10 +4,12 @@ set -eo pipefail
 ROOT=$(pwd)
 
 echo "=================================="
-echo "Step 1: Configuring macOS defaults"
+echo "Step 1: Configuring macOS"
 echo "=================================="
 
 sh "./macos.sh"
+# OrbStack/Docker requires Rosetta for x86 containers, let's install it without user interaction
+softwareupdate --install-rosetta --agree-to-license
 
 echo "=================================="
 echo "Step 2: Installing Homebrew"
