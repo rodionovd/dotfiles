@@ -76,7 +76,11 @@ get_space () {
   printf ' %.0s' {1..$SPACES}
 }
 
-_1LEFT="$_USERNAME $_PATH"
+if [[ $(hostname) =~ ".local" ]]; then
+  _1LEFT="$_PATH"
+else
+  _1LEFT="$_USERNAME $_PATH"
+fi
 _1RIGHT="%*"
 
 bureau_precmd () {
