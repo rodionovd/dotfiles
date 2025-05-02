@@ -7,6 +7,7 @@ echo "=================================="
 echo "Step 1: Configuring macOS"
 echo "=================================="
 
+# Vital user defaults
 sh "./macos.sh"
 # OrbStack/Docker requires Rosetta for x86 containers, let's install it without user interaction
 softwareupdate --install-rosetta --agree-to-license
@@ -17,7 +18,7 @@ echo "=================================="
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-brew bundle install --file "$ROOT/brew/Brewfile" || true
+brew bundle install --file "$ROOT/apps/Brewfile" || true
 
 echo "=================================="
 echo "Step 3: Configuring git & ssh"
@@ -41,21 +42,18 @@ ln -s -F -f "$ROOT/zsh/rodionovd.zsh-theme" ~/.oh-my-zsh/themes/rodionovd.zsh-th
 touch ~/.hushlogin
 
 echo "=================================="
-echo "Step 5: Configuring Ghostty"
+echo "Step 5: Configuring apps"
 echo "=================================="
 
+# Ghostty
 mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
-ln -s -F -f "$ROOT/ghostty/config" ~/Library/Application\ Support/com.mitchellh.ghostty/config
-
-echo "=================================="
-echo "Step 6: Configuring code editors"
-echo "=================================="
-
-ln -s -F -f "$ROOT/vim/vim_dir" ~/.vim
-ln -s -F -f "$ROOT/vim/vimrc" ~/.vimrc
-
+ln -s -F -f "$ROOT/apps/ghostty/config" ~/Library/Application\ Support/com.mitchellh.ghostty/config
+# vim
+ln -s -F -f "$ROOT/apps/vim/vim_dir" ~/.vim
+ln -s -F -f "$ROOT/apps/vim/vimrc" ~/.vimrc
+# VSCode
 mkdir -p ~/Library/Application\ Support/Code/User/
-ln -s -F -f "$ROOT/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+ln -s -F -f "$ROOT/apps/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
 echo "=================================="
 echo "Fin: Bye Terminal, hello Ghostty"

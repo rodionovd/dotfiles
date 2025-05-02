@@ -1,11 +1,13 @@
+# Visuals
 theme = xcodedarkhc
 cursor-color = aqua
-font-size = 13
+font-size = 14
 window-padding-x = 8
 window-padding-y = 8
 
 # Default window size
-window-width = 100
+window-width = 90
 window-height = 18
 
+# Check for updates but don't download them automatically
 auto-update = check
