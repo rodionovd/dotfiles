@@ -41,12 +41,12 @@ bureau_git_prompt() {
   fi
 
   # quote % in git information
-  local output="${gitinfo:gs/%/%%}"
+  local output="%{$fg_bold[white]%}${gitinfo:gs/%/%%}%{$reset_color%}"
 
   # check git status
   local gitstatus=$(bureau_git_status)
   if [[ -n "$gitstatus" ]]; then
-    output="$gitstatus %{$fg_bold[white]%}$output%{$reset_color%}"
+    output="$gitstatus $output"
   fi
 
   echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${output}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
