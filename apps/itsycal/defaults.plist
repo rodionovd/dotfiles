@@ -1,0 +1,13 @@
+{
+    "BeepBeepOnTheHour" = 0;
+    "ClockFormat" = "H:mm";
+    "MenuBarIconType" = 1;
+    "MoCalendarNumRows" = 6;
+    "ShowDayOfWeekInIcon" = 1;
+    "ShowDaysWithNoEventsInAgenda" = 0;
+    "ShowEventDays" = 3;
+    "ShowLocation" = 0;
+    "ShowMonthInIcon" = 1;
+    "SizePreference" = 0;
+    "UseColoredDots" = 0;
+}
