@@ -58,4 +58,5 @@
     "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
     "chat.commandCenter.enabled": false,
     "makefile.configureOnOpen": false,
+    "workbench.startupEditor": "none",
 }
