@@ -66,6 +66,17 @@ function o() {
     fi
 }
 
+# `cd` into the current Finder location
+# Stolen from https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/macos/macos.plugin.zsh
+function cdf() {
+    finder_dir=`osascript 2>/dev/null <<EOF
+    tell application "Finder"
+      return POSIX path of (insertion location as alias)
+    end tell
+EOF`
+  cd "$finder_dir"
+}
+
 # 
 # PATH
 # 
