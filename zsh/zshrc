@@ -55,6 +55,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 # 
 alias {cl,сд}="clear"
 alias qq="xattr -rd com.apple.quarantine"
+alias vscode="code"
 
 # Same as open(1), but reveals `pwd` in Finder when invoked without arguments
 function o() {
