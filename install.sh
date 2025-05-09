@@ -55,7 +55,7 @@ ln -s -F -f "$ROOT/apps/vim/vimrc" ~/.vimrc
 mkdir -p ~/Library/Application\ Support/Code/User/
 ln -s -F -f "$ROOT/apps/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 # Itsycal
-defaults write -app Itsycal "$(cat ./apps/itsycal/defaults.plist)"
+defaults import -app Itsycal "$ROOT/apps/itsycal/defaults.plist"
 
 echo "=================================="
 echo "Fin: Bye Terminal, hello Ghostty"
