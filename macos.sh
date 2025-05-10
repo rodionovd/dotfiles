@@ -123,6 +123,15 @@ defaults write -app Safari HistoryAgeInDaysLimit -int 365000 # aka "never remove
 defaults write -app Safari UniversalSearchEnabled -bool false
 defaults write -app Safari SuppressSearchSuggestions -bool true
 defaults write -app Safari PreloadTopHit -bool false
+(
+    # This makes new tabs **created by cmd+clicking a link** appear right after the current tab
+    # instead of "the last related tab" whatever that is
+    defaults write -app Safari WBSNewTabPositionPreferenceKey -int 0
+    defaults write -app Safari WBSNewBlankTabPositionAppliesToAllBlankTabsPreferenceKey -bool true
+    defaults write -app Safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -bool true
+    # NOTE: positioning of new tabs **created by pressing cmd+T** can't be fixed with a user default,
+    # so we have to rely on FastScripts.app and a custom AppleScript -- see Step 5 in `install.sh`
+)
 
 # Mail
 defaults write -app Mail ConversationViewSortDescending -int 1
