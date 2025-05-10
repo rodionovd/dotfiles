@@ -68,6 +68,16 @@ echo "=================================="
 (
     defaults import -app Itsycal "$ROOT/apps/itsycal/defaults.plist"
 )
+# FastScripts
+(
+    defaults import -app FastScripts "$ROOT/apps/fastscripts/defaults.plist"
+    # Safari won't always open a new tab next to the current one, but rather at the end of the tab list.
+    # This sucks for a tab hoarder like me :/ The script below is a decent workaround.
+    # NOTE: the right keyboard shortcut (cmd+T) is already binded in the defaults set above
+    mkdir -p ~/Library/Scripts/Applications/Safari
+    ln -s -F -f "$ROOT/apps/fastscripts/NewSafariTabNextToCurrent.applescript" \
+        ~/Library/Scripts/Applications/Safari/NewSafariTabNextToCurrent.applescript
+)
 
 echo "=================================="
 echo "Fin: Bye Terminal, hello Ghostty"
