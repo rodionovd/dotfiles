@@ -31,7 +31,6 @@ echo "=================================="
 (
     ln -s -F -f "$ROOT/git/gitconfig" ~/.gitconfig
     ln -s -F -f "$ROOT/git/gitignore_global" ~/.gitignore_global
-    # TODO: wouldn't it be better to symlink the entire .ssh directory?
     mkdir -p ~/.ssh
     ln -s -F -f "$ROOT/ssh/config" ~/.ssh/config
 )
