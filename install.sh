@@ -20,9 +20,9 @@ echo "=================================="
 (
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    ln -s -F -f "$ROOT/apps/brew/aliases" ~/.brew-aliases
     brew bundle install --file "$ROOT/apps/brew/Brewfile" || true
     brew cleanup --prune=all
+    ln -s -F -f "$ROOT/apps/brew/aliases" ~/.brew-aliases
 )
 
 echo "=================================="
