@@ -28,7 +28,8 @@ cask 'knockknock'
 cask 'latest'
 cask 'macs-fan-control'
 cask 'monodraw'
-cask 'orbstack', postinstall: "${HOMEBREW_PREFIX}/bin/orb start"
+# OrbStack doesn't work in a VM (which I use to test how my whole .dotfiles setup installs)
+cask 'orbstack', postinstall: '/bin/zsh -c "${HOMEBREW_PREFIX}/bin/orb start || true"'
 cask 'pixelsnap'
 cask 'postico'
 cask 'proxyman'
