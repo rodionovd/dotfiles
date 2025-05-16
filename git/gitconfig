@@ -16,8 +16,6 @@
 [diff]
 	compactionHeuristic = true
 	algorithm = histogram
-[diff "plist"]
-	textconv = plutil -convert xml1 -o -
 [color]
   pager = true
   ui = auto
