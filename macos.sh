@@ -10,7 +10,7 @@ defaults write -globalDomain AppleMeasurementUnits -string "Centimeters"
 # Format numbers like "123456.789"
 defaults write -globalDomain AppleICUNumberSymbols -dict \
     "0"  -string "." \
-    "1"  -string " " \
+    "1"  -string " " \
     "10" -string "." \
     "17" -string " "
 
