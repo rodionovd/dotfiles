@@ -52,7 +52,7 @@
   "chat.commandCenter.enabled": false,
   "makefile.configureOnOpen": false,
   "workbench.startupEditor": "newUntitledFile",
-  "editor.rulers": [100],
+  "editor.rulers": [80, 100],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -60,5 +60,10 @@
   "editor.codeActionsOnSave": {},
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "onFocusChange",
+  "github.copilot.nextEditSuggestions.enabled": true
 }
