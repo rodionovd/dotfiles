@@ -35,3 +35,9 @@
 	ui = auto
 [merge]
 	conflictstyle = zdiff3
+[commit]
+	gpgsign = false
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[rebase]
+	updateRefs = true
