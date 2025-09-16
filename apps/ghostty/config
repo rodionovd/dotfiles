@@ -1,5 +1,5 @@
 # Visuals
-theme = xcodedarkhc
+theme = Xcode Dark hc
 cursor-color = aqua
 font-size = 14
 window-padding-x = 8
@@ -11,3 +11,4 @@ window-height = 20
 
 # Check for updates but don't download them automatically
 auto-update = check
+keybind = shift+enter=text:\n
