@@ -21,7 +21,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="rodionovd"
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
 
-# Disable auto-updates and nags
+# Disable auto-updates but keep periodic reminders
 zstyle ':omz:update' mode reminder
 
 plugins=()
