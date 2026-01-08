@@ -2,6 +2,8 @@ tap "oven-sh/bun"
 
 # Development
 brew 'clang-format'
+cask 'claude-code'
+cask 'codex'
 brew 'git-lfs'
 brew 'git'
 brew 'node'
