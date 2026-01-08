@@ -1,8 +1,11 @@
+tap "oven-sh/bun"
+
 # Development
 brew 'clang-format'
 brew 'git-lfs'
 brew 'git'
 brew 'node'
+brew 'oven-sh/bun/bun'
 brew 'python3'
 brew 'ruby'
 brew 'shellcheck'
