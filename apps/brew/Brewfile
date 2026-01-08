@@ -38,7 +38,8 @@ cask 'libreoffice'
 cask 'macs-fan-control'
 cask 'monodraw'
 cask 'notion'
-# OrbStack doesn't work in a VM (which I use to test how my whole .dotfiles setup installs)
+# OrbStack doesn't work inside a VM (which I use to test this .dotfiles setup)
+# because nested virtualization is only available on M3+ Macs
 cask 'orbstack', postinstall: '/bin/zsh -c "${HOMEBREW_PREFIX}/bin/orb start || true"'
 cask 'pixelsnap'
 cask 'postico'
