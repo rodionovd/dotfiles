@@ -11,4 +11,3 @@ window-height = 20
 
 # Check for updates but don't download them automatically
 auto-update = check
-keybind = shift+enter=text:\n
