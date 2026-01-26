@@ -1,3 +1,6 @@
+# https://ghostty.org/docs/help/terminfo#ssh
+shell-integration-features = ssh-env
+
 # Visuals
 theme = Xcode Dark hc
 cursor-color = aqua
