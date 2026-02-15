@@ -30,6 +30,15 @@ defaults write -globalDomain AppleKeyboardUIMode -int 3
 # TODO "Select next source in input menu with ⌘-Space"
 
 # ---- ---- ---- 
+# ---- Liquid Glass Nonsense
+# ---- ---- ---- 
+
+# Accessibility -> Display -> Reduce transparency
+defaults write com.apple.Accessibility EnhancedBackgroundContrastEnabled -bool true
+# Appearance -> Liquid Glass -> Tinted
+defaults write -globalDomain NSGlassDiffusionSetting -int 1
+
+# ---- ---- ---- 
 # ---- UI: windows, Dock, Finder
 # ---- ---- ---- 
 
