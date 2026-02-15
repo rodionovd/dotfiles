@@ -30,6 +30,7 @@ cask 'chatgpt'
 cask 'hkamran80/things/multiliner'
 cask 'sf-symbols'
 cask "webtorrent"
+cask 'proxyman'
 
 # VSCode extensions
 vscode 'monokai.theme-monokai-pro-vscode'
