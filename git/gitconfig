@@ -1,43 +1,67 @@
 [user]
-	name = Dmitry Rodionov
-	email = i.am.rodionovd@gmail.com
+	name = Anton Ivanov
+	email = evgenich95@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-	compression = 9
+	trustctime = false
+	editor = code --wait
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	required = true
 	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [alias]
+	line = !echo "-------------------"
+	update = !git line && git fetch --all --tags && git pull --all && echo "Merged branches:" && git delete-merged-branches && echo "Changes:" && echo `git diff` && git line
+
+	branch-name = rev-parse --abbrev-ref HEAD
+	
 	co = checkout
-	st = status
-	graph = log --graph
-[diff]
-	compactionHeuristic = true
-	algorithm = histogram
-[color]
-  pager = true
-  ui = auto
-  status = auto
-  diff = auto
-  branch = auto
-  showBranch = auto
-  interactive = auto
-  grep = auto
-[pull]
-	rebase = merges
-[init]
-	defaultBranch = main
-[branch]
-	sort = -committerdate
-[column]
-	ui = auto
-[merge]
-	conflictstyle = zdiff3
+	disscard = !git reset && git clean -f -d && git co .
+	empty-commit = !git commit --allow-empty
+
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	reset-all = reset --hard origin
+	merged-branches = "!git branch --merged | grep -v '\\*'"
+	delete-merged-branches = !git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d
+	
+	undo-last = !git reset HEAD~
+	patch = "!f() { git diff > $1.patch; }; f"
+	create-tag = "!f() { git tag -a $1 -m "$1"; }; f"
+	push-new = !git push --set-upstream origin $(git branch-name)
+	commit-current-with-message = !git add . && git commit -m
+	refresh = !git fetch --all --tag && git pull
+	update-develop = !git fetch origin develop:develop
+	rebase-onto-develop = !git fetch origin develop:develop && git rebase --onto develop HEAD~1
+	stashgrep = "!f() { for i in `git stash list --format=\"%gd\"` ; \
+              do git stash show -p $i | grep -H --label=\"$i\" \"$@\" ; done ; }; f"
+	
+	default-branch = "!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
+	merge-base-origin ="!f() { git merge-base ${1-HEAD} origin/$(git default-branch); };f "
+	stack = "!f() { \
+		BRANCH=${1-HEAD}; \
+		MERGE_BASE=$(git merge-base-origin $BRANCH); \
+		git log --decorate-refs=refs/heads --simplify-by-decoration --pretty=format:\"%(decorate:prefix=,suffix=,tag=,separator=%n)\" $MERGE_BASE..$BRANCH; \
+	};f "
+	push-stack = "!f() { \
+		BRANCH=${1-HEAD}; \
+		git stack $BRANCH | xargs -I {} git push --force-with-lease origin {}; \
+	};f "
+
+	rebase-commit = "!f() { \
+	 swift ~/Documents/SwfitScipts/RebaseCommit/rebase_commit_script.swift $1 $2; \
+	};f "
+
 [commit]
-	gpgsign = false
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-[rebase]
-	updateRefs = true
+	template = ~/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

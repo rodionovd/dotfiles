@@ -81,6 +81,23 @@ EOF`
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/sbin"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#
+# Evgenich
+#
+
+alias edit="open -e"
+
+alias anime="swift build --product anime --package-path /Users/home/Documents/SwiftScripts/SwiftCLISelector >/dev/null 2>&1 && SWIFT_BACKTRACE='enable=yes' /Users/home/Documents/SwiftScripts/SwiftCLISelector/.build/debug/anime"
+
+alias debug-anime="swift build --product anime --package-path /Users/home/Documents/SwiftScripts/SwiftCLISelector-debug >/dev/null 2>&1 && SWIFT_BACKTRACE='enable=yes' /Users/home/Documents/SwiftScripts/SwiftCLISelector-debug/.build/debug/anime"
+
+alias hui="swift build --product hui --package-path /Users/home/Documents/SwiftScripts/HUI >/dev/null 2>&1 && SWIFT_BACKTRACE='enable=yes' /Users/home/Documents/SwiftScripts/HUI/.build/debug/hui"
+
+alias dict-hui="cd /Users/home/Documents/SwiftScripts/HUI"
+
+alias anime_old="swift /Users/home/Documents/SwfitScipts/anime/anime.swift"
+alias debug="cd /Users/home/Documents/SwiftScripts/SwiftCLISelector-debug"
+alias main="cd /Users/home/Documents/SwiftScripts/SwiftCLISelector"
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+alias editOzh="edit ~/.zshrc"

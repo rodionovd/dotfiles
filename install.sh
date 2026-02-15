@@ -55,30 +55,30 @@ echo "=================================="
     mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
     ln -s -F -f "$ROOT/apps/ghostty/config" ~/Library/Application\ Support/com.mitchellh.ghostty/config
 )
-# vim
-(
-    ln -s -F -f "$ROOT/apps/vim/vim_dir" ~/.vim
-    ln -s -F -f "$ROOT/apps/vim/vimrc" ~/.vimrc
-)
+# # vim
+# (
+#     ln -s -F -f "$ROOT/apps/vim/vim_dir" ~/.vim
+#     ln -s -F -f "$ROOT/apps/vim/vimrc" ~/.vimrc
+# )
 # VSCode
 (
     mkdir -p ~/Library/Application\ Support/Code/User/
     ln -s -F -f "$ROOT/apps/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 )
-# Itsycal
-(
-    defaults import -app Itsycal "$ROOT/apps/itsycal/defaults.plist"
-)
-# FastScripts
-(
-    defaults import -app FastScripts "$ROOT/apps/fastscripts/defaults.plist"
-    # Safari won't always open a new tab next to the current one, but rather at the end of the tab list.
-    # This sucks for a tab hoarder like me :/ The script below is a decent workaround.
-    # NOTE: the right keyboard shortcut (cmd+T) is already binded in the defaults set above
-    mkdir -p ~/Library/Scripts/Applications/Safari
-    ln -s -F -f "$ROOT/apps/fastscripts/NewSafariTabNextToCurrent.applescript" \
-        ~/Library/Scripts/Applications/Safari/NewSafariTabNextToCurrent.applescript
-)
+# # Itsycal
+# (
+#     defaults import -app Itsycal "$ROOT/apps/itsycal/defaults.plist"
+# )
+# # FastScripts
+# (
+#     defaults import -app FastScripts "$ROOT/apps/fastscripts/defaults.plist"
+#     # Safari won't always open a new tab next to the current one, but rather at the end of the tab list.
+#     # This sucks for a tab hoarder like me :/ The script below is a decent workaround.
+#     # NOTE: the right keyboard shortcut (cmd+T) is already binded in the defaults set above
+#     mkdir -p ~/Library/Scripts/Applications/Safari
+#     ln -s -F -f "$ROOT/apps/fastscripts/NewSafariTabNextToCurrent.applescript" \
+#         ~/Library/Scripts/Applications/Safari/NewSafariTabNextToCurrent.applescript
+# )
 
 echo "=================================="
 echo "Fin: Bye Terminal, hello Ghostty"
