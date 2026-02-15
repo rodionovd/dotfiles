@@ -46,9 +46,6 @@ defaults write -globalDomain NSToolbarTitleViewRolloverDelay -float 0
 defaults write com.apple.dock orientation -string right
 # Disable Dock icon magnification
 defaults write com.apple.dock magnification -bool false
-# Autohide Dock
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.Dock autohide-delay -float 0
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 16
 # Don’t show recent applications in Dock

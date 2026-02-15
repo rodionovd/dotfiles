@@ -9,10 +9,6 @@ export LANG=en_US.UTF-8
 #
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
-export COCOAPODS_DISABLE_STATS=true
-export FASTLANE_OPT_OUT_USAGE=1
-export FASTLANE_SKIP_UPDATE_CHECK=1
-export FASTLANE_HIDE_CHANGELOG=1
 
 # 
 # oh-my-zsh configuration
@@ -49,38 +45,7 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # 
-# Shortcuts
-# 
-alias {cl,сд}="clear"
-alias qq="xattr -rd com.apple.quarantine"
-alias vscode="code"
-
-# Same as open(1), but reveals `pwd` in Finder when invoked without arguments
-function o() {
-    if (( $# == 0 )) then
-        open .
-    else
-        open $1
-    fi
-}
-
-# `cd` into the current Finder location
-# Stolen from https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/macos/macos.plugin.zsh
-function cdf() {
-    local finder_dir=`osascript 2>/dev/null <<EOF
-    tell application "Finder"
-      return POSIX path of (insertion location as alias)
-    end tell
-EOF`
-  cd "$finder_dir"
-}
-
-# 
 # PATH
 # 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/sbin"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
