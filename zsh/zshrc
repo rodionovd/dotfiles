@@ -5,6 +5,11 @@ export LC_CTYPE="UTF-8"
 export LANG=en_US.UTF-8
 
 #
+# Common
+#
+export EDITOR="code --wait"
+
+#
 # Opt-outs
 #
 export HOMEBREW_NO_ANALYTICS=1
