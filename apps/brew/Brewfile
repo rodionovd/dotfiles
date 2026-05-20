@@ -1,9 +1,10 @@
-tap "oven-sh/bun"
+# hey eye
+brew 'anomalyco/tap/opencode'
+cask 'claude-code'
+cask 'codex'
 
 # Development
 brew 'clang-format'
-cask 'claude-code'
-cask 'codex'
 brew 'git-lfs'
 brew 'git'
 brew 'node'
