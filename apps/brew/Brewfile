@@ -1,5 +1,5 @@
 # hey eye
-brew 'anomalyco/tap/opencode'
+brew 'anomalyco/tap/opencode', trusted: true
 cask 'claude-code'
 cask 'codex'
 
@@ -8,7 +8,7 @@ brew 'clang-format'
 brew 'git-lfs'
 brew 'git'
 brew 'node'
-brew 'oven-sh/bun/bun'
+brew 'oven-sh/bun/bun', trusted: true
 brew 'python3'
 brew 'ruby'
 brew 'shellcheck'
