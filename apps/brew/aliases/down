@@ -5,4 +5,4 @@
 # types `brew down`. Any remaining arguments are passed to
 # this script. You can retrieve those with $*, or only the first
 # one with $1. Please keep your script on one line.
-brew upgrade
+brew upgrade --no-ask
