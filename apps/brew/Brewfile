@@ -42,6 +42,7 @@ cask 'latest'
 cask 'libreoffice'
 cask 'macs-fan-control'
 cask 'macdroid'
+cask 'macsymbolicator'
 cask 'monodraw'
 cask 'notion'
 # OrbStack doesn't work inside a VM (which I use to test this .dotfiles setup)
