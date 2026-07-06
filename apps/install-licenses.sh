@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -eo pipefail
-ROOT=$(pwd)
 
 if ! op signin; then
     echo "[ERROR] Turn on the 1Password desktop app integration, then run this script again."
